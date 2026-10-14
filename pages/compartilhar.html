@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compartilhe uma Leitura - Moonie</title>
+  <link rel="stylesheet" href="../css/compartilhar.css">
+</head>
+<body>
+
+  <!-- Header padrão -->
+  <header class="main-header">
+    <a href="../index.html" class="brand">Moonie</a>
+    <nav class="nav-links">
+      <a href="biblioteca.html">Biblioteca</a>
+      <a href="perfil.html">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main class="share-container">
+    <div class="share-header">
+      <h1>Compartilhe uma Leitura</h1>
+      <p>Envie um arquivo pronto ou escreva sua própria história para a comunidade Moonie.</p>
+    </div>
+
+    <!-- Navegação entre Abas -->
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="upload-tab">Upload de Arquivo (PDF / EPUB)</button>
+      <button class="tab-btn" data-tab="write-tab">Escrever Minha História</button>
+    </div>
+
+    <!-- ABA 1: UPLOAD DE ARQUIVO -->
+    <section id="upload-tab" class="tab-content active">
+      <form id="upload-form" class="share-form">
+        <div class="drop-zone" id="drop-zone">
+          <span class="drop-icon">📁</span>
+          <p>Arraste e solte seu arquivo em <strong>PDF</strong> ou <strong>EPUB</strong> aqui</p>
+          <small>ou clique para selecionar do computador</small>
+          <input type="file" id="file-input" accept=".pdf, .epub" hidden required>
+          <div id="file-name" class="file-name-preview"></div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label for="upload-title">Título da Obra</label>
+            <input type="text" id="upload-title" placeholder="Ex: O Mapa das Coisas Esquecidas" required>
+          </div>
+          <div class="field">
+            <label for="upload-author">Autor(a)</label>
+            <input type="text" id="upload-author" placeholder="Seu nome ou pseudônimo" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label for="upload-genre">Gênero</label>
+            <select id="upload-genre" required>
+              <option value="">Selecione um gênero</option>
+              <option value="Romance">Romance</option>
+              <option value="Fantasia">Fantasia</option>
+              <option value="Poesia">Poesia</option>
+              <option value="Ficção Científica">Ficção Científica</option>
+              <option value="MISTÉRIO">Mistério</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="upload-synopsis">Sinopse / Descrição</label>
+          <textarea id="upload-synopsis" rows="4" placeholder="Conte um pouco sobre esta obra..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Publicar Obra</button>
+      </form>
+    </section>
+
+    <!-- ABA 2: ESCREVER HISTÓRIA -->
+    <section id="write-tab" class="tab-content">
+      <form id="write-form" class="share-form">
+        <div class="field-group">
+          <div class="field">
+            <label for="write-title">Título da Obra</label>
+            <input type="text" id="write-title" placeholder="Ex: Crônicas do Luar" required>
+          </div>
+          <div class="field">
+            <label for="write-genre">Gênero</label>
+            <select id="write-genre" required>
+              <option value="">Selecione um gênero</option>
+              <option value="Romance">Romance</option>
+              <option value="Fantasia">Fantasia</option>
+              <option value="Poesia">Poesia</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="write-content">Sua História / Capítulo</label>
+          <textarea id="write-content" rows="12" placeholder="Era uma vez..." required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="save-draft-btn" class="btn-secondary">Salvar Rascunho</button>
+          <button type="submit" class="btn-submit">Publicar História</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Script do Chatbot e Script da Página -->
+  <script src="../js/chat-widget.js"></script>
+  <script src="../js/compartilhar.js"></script>
+  
+</body>
+</html>

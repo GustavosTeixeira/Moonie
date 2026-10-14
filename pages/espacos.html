@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonie - Espaços de Leitura</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilo CSS apontando para espaco.css -->
+    <link rel="stylesheet" href="../css/espaco.css">
+    
+</head>
+<body>
+
+    <!-- ELEMENTOS DE ÁUDIO MP3 DA SUA PASTA AUDIO -->
+    <audio id="audio-cafe" src="../audio/cafe.mp3" loop preload="auto"></audio>
+    <audio id="audio-chuva" src="../audio/chuva.mp3" loop preload="auto"></audio>
+    <audio id="audio-lareira" src="../audio/lareira.mp3" loop preload="auto"></audio>
+    <audio id="audio-natureza" src="../audio/natureza.mp3" loop preload="auto"></audio>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+        </a>
+        <div class="logo">MOONIE</div>
+    </nav>
+
+    <!-- HERO / CABEÇALHO DA PÁGINA -->
+    <header class="space-hero">
+        <span class="badge">Ambientes Imersivos</span>
+        <h1 class="hero-title" id="active-space-title">Café Literário</h1>
+        <p class="hero-desc" id="active-space-desc">
+            Sinta o aroma do café fresco e o suave murmurinho de conversas enquanto se perde nas páginas de romances e contos envolventes.
+        </p>
+    </header>
+
+    <!-- ABAS DE SELEÇÃO DE ESPAÇOS -->
+    <div class="space-tabs">
+        <button class="tab-btn active" data-espaco="cafe">
+            <i class="fa-solid fa-mug-hot"></i> Café Literário
+        </button>
+        <button class="tab-btn" data-espaco="estudo">
+            <i class="fa-solid fa-cloud-rain"></i> Espaço de Estudo
+        </button>
+        <button class="tab-btn" data-espaco="leitura">
+            <i class="fa-solid fa-fire"></i> Sala de Leitura
+        </button>
+        <button class="tab-btn" data-espaco="jardim">
+            <i class="fa-solid fa-tree"></i> Jardim Aconchegante
+        </button>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL (GRID) -->
+    <main class="main-container">
+        
+        <!-- COLUNA DA ESQUERDA: MIXER DE SOM & TIMER -->
+        <div class="left-column">
+            
+            <!-- GERENCIADOR DE ÁUDIO (MIXER) -->
+            <section class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="fa-solid fa-sliders"></i> Som Ambiente
+                    </h2>
+                    <span class="sub-header-tag">Misture os sons</span>
+                </div>
+
+                <div class="sound-list">
+                    
+                    <!-- Café -->
+                    <div class="sound-item" id="item-cafe">
+                        <div class="sound-icon">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </div>
+                        <div class="sound-info">
+                            <div class="sound-name">Cafeteria</div>
+                            <div class="slider-container">
+                                <i class="fa-solid fa-volume-low vol-icon"></i>
+                                <input type="range" class="volume-slider" id="vol-cafe" min="0" max="1" step="0.01" value="0.5">
+                                <i class="fa-solid fa-volume-high vol-icon"></i>
+                            </div>
+                        </div>
+                        <button class="play-btn" data-som="cafe" aria-label="Tocar Som de Cafeteria">
+                            <i class="fa-solid fa-play" id="icon-cafe"></i>
+                        </button>
+                    </div>
+
+                    <!-- Chuva -->
+                    <div class="sound-item" id="item-chuva">
+                        <div class="sound-icon">
+                            <i class="fa-solid fa-cloud-showers-heavy"></i>
+                        </div>
+                        <div class="sound-info">
+                            <div class="sound-name">Chuva Suave</div>
+                            <div class="slider-container">
+                                <i class="fa-solid fa-volume-low vol-icon"></i>
+                                <input type="range" class="volume-slider" id="vol-chuva" min="0" max="1" step="0.01" value="0.5">
+                                <i class="fa-solid fa-volume-high vol-icon"></i>
+                            </div>
+                        </div>
+                        <button class="play-btn" data-som="chuva" aria-label="Tocar Som de Chuva">
+                            <i class="fa-solid fa-play" id="icon-chuva"></i>
+                        </button>
+                    </div>
+
+                    <!-- Lareira -->
+                    <div class="sound-item" id="item-lareira">
+                        <div class="sound-icon">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <div class="sound-info">
+                            <div class="sound-name">Lareira</div>
+                            <div class="slider-container">
+                                <i class="fa-solid fa-volume-low vol-icon"></i>
+                                <input type="range" class="volume-slider" id="vol-lareira" min="0" max="1" step="0.01" value="0.5">
+                                <i class="fa-solid fa-volume-high vol-icon"></i>
+                            </div>
+                        </div>
+                        <button class="play-btn" data-som="lareira" aria-label="Tocar Som de Lareira">
+                            <i class="fa-solid fa-play" id="icon-lareira"></i>
+                        </button>
+                    </div>
+
+                    <!-- Natureza -->
+                    <div class="sound-item" id="item-natureza">
+                        <div class="sound-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <div class="sound-info">
+                            <div class="sound-name">Vento & Pássaros</div>
+                            <div class="slider-container">
+                                <i class="fa-solid fa-volume-low vol-icon"></i>
+                                <input type="range" class="volume-slider" id="vol-natureza" min="0" max="1" step="0.01" value="0.5">
+                                <i class="fa-solid fa-volume-high vol-icon"></i>
+                            </div>
+                        </div>
+                        <button class="play-btn" data-som="natureza" aria-label="Tocar Som da Natureza">
+                            <i class="fa-solid fa-play" id="icon-natureza"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="master-controls">
+                    <button class="btn-outline btn-muted" id="btn-silenciar">
+                        <i class="fa-solid fa-volume-xmark"></i> Silenciar Tudo
+                    </button>
+                </div>
+            </section>
+
+            <!-- CRONÔMETRO DE FOCO (POMODORO) -->
+            <section class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="fa-solid fa-stopwatch"></i> Tempo de Foco
+                    </h2>
+                    <span class="sub-header-tag">25 minutos</span>
+                </div>
+                
+                <div class="timer-display" id="timer-display">25:00</div>
+
+                <div class="timer-controls">
+                    <button class="btn-outline" id="btn-timer-start">
+                        <i class="fa-solid fa-play"></i> Iniciar
+                    </button>
+                    <button class="btn-outline btn-muted" id="btn-timer-pause">
+                        <i class="fa-solid fa-pause"></i> Pausar
+                    </button>
+                    <button class="btn-outline btn-muted" id="btn-timer-reset">
+                        <i class="fa-solid fa-rotate-right"></i> Resetar
+                    </button>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- COLUNA DA DIREITA: RECOMENDAÇÕES DE LIVROS -->
+        <div class="right-column">
+            <section class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="fa-solid fa-book-bookmark"></i> Sugestões para este Espaço
+                    </h2>
+                </div>
+
+                <p class="rec-desc">Obras selecionadas para combinar com a atmosfera do <strong id="sub-space-title">Café Literário</strong>:</p>
+
+                <!-- A lista de livros é injetada dinamicamente via JS -->
+                <div class="book-list" id="book-recommendations"></div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Script JS apontando para espaco.js -->
+    <script src="../js/espaco.js"></script>
+</body>
+</html>

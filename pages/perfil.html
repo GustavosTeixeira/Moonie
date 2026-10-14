@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu perfil | Moonie</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="../index.html" class="logo"><img src="../img/Logo.png" alt="Moonie"></a>
+
+    <div class="search">
+        <span>⌕</span>
+        <input type="text" placeholder="Buscar livros, autores ou sentimentos">
+    </div>
+
+    <nav class="nav">
+        <a href="biblioteca.html">Biblioteca</a>
+        <a href="minha-leitura.html">Minha leitura</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="compartilhar.html">Compartilhe uma leitura</a>
+        <a href="perfil.html">Meu perfil</a>
+        <a href="login.html">Sair</a>
+    </nav>
+
+</header>
+
+<main class="profile-page">
+
+    <!-- Ações e Atag de Compartilhar no topo, igual ao Figma -->
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+        <a href="compartilhar.html" class="profile-button" style="text-transform: uppercase; font-size: 12px; font-weight: 700; letter-spacing: 0.05em;">
+            Compartilhe uma leitura
+        </a>
+    </div>
+
+    <section class="profile-header">
+
+        <div class="profile-avatar">A</div>
+
+        <div class="profile-info">
+
+            <p class="section-label">MEU PERFIL</p>
+
+            <h1>Olá, leitor(a)!</h1>
+
+            <p>Esse é o seu espaço dentro da Moonie.</p>
+
+        </div>
+
+    </section>
+
+
+    <section class="profile-stats">
+
+        <div class="profile-stat">
+            <strong>0</strong>
+            <span>Livros lidos</span>
+        </div>
+
+        <div class="profile-stat">
+            <strong>0</strong>
+            <span>Histórias salvas</span>
+        </div>
+
+        <div class="profile-stat">
+            <strong>0h</strong>
+            <span>Tempo de leitura</span>
+        </div>
+
+    </section>
+
+
+    <section class="profile-section">
+
+        <div class="profile-heading">
+
+            <div>
+                <p class="section-label">MINHA BIBLIOTECA</p>
+
+                <h2>Suas histórias</h2>
+            </div>
+
+            <a href="minha-leitura.html">Ver minha leitura →</a>
+
+        </div>
+
+        <div class="profile-empty">
+
+            <h3>Sua biblioteca ainda está começando.</h3>
+
+            <p>Explore a Moonie e encontre uma história para chamar de sua.</p>
+
+            <a href="biblioteca.html" class="profile-button">Explorar biblioteca</a>
+
+        </div>
+
+    </section>
+
+    <section class="profile-section" id="favoritos">
+
+        <div class="profile-heading">
+            <div>
+                <p class="section-label">FAVORITOS</p>
+                <h2>Meus favoritos</h2>
+            </div>
+        </div>
+
+        <div class="profile-favorites">
+            <p>Você ainda não favoritou nenhum livro.</p>
+        </div>
+    </section>
+
+    <section class="profile-section">
+
+        <p class="section-label">PREFERÊNCIAS</p>
+        
+        <h2>Seu espaço de leitura</h2>
+
+        <div class="profile-options">
+
+            <div class="profile-option">
+
+                <h3>Modo de leitura</h3>
+
+                <p>Personalize a experiência de leitura de acordo com o seu momento.</p>
+
+                <a href="leitura.html">Ajustar leitura →</a>
+
+            </div>
+
+
+            <div class="profile-option">
+
+                <h3>Minha leitura</h3>
+
+                <p>Acesse os livros que você escolheu guardar para ler depois.</p>
+
+                <a href="minha-leitura.html">Ver livros →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+
+        <img src="../img/Logo.png" alt="Moonie">
+
+        <p>Biblioteca virtual noturna.</p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <div>
+
+            <h3>Moonie</h3>
+
+            <a href="../index.html">Início</a>
+            <a href="biblioteca.html">Biblioteca</a>
+            <a href="eventos.html">Eventos</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Conta</h3>
+
+            <a href="perfil.html">Meu perfil</a>
+            <a href="login.html">Sair</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 Moonie. Todos os direitos reservados.</p>
+
+    </div>
+
+</footer>
+
+<script src="../js/perfil.js"></script>
+<script src="../js/chat-widget.js"></script>
+</body>
+
+</html>

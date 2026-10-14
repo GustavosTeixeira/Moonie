@@ -1,0 +1,150 @@
+:root {
+  --navy: #10192e;
+  --orange: #f0993d;
+  --line: rgba(255, 255, 255, 0.18);
+  --muted: #9aa2b5;
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.share-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.share-header {
+  margin-bottom: 30px;
+}
+
+.share-header h1 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.share-header p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Abas */
+.tab-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background: rgba(240, 153, 61, 0.15);
+  color: var(--orange);
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Formulários e Inputs */
+.share-form { display: flex; flex-direction: column; gap: 20px; }
+.field-group { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+
+label { font-size: 12px; font-weight: 700; color: #cfd5e3; text-transform: uppercase; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+/* Área Drag & Drop */
+.drop-zone {
+  border: 2px dashed var(--line);
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.drop-zone:hover { border-color: var(--orange); }
+.drop-icon { font-size: 36px; display: block; margin-bottom: 8px; }
+.file-name-preview { margin-top: 10px; color: var(--orange); font-weight: 600; }
+
+/* Botões */
+.btn-submit {
+  padding: 14px;
+  background: var(--orange);
+  color: #10192e;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  padding: 14px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-actions { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; }

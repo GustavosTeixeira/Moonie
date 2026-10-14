@@ -1,0 +1,1298 @@
+/* =========================================================
+   MOONIE — BIBLIOTECA NOTURNA
+   ========================================================= */
+
+
+/* =========================================================
+   CORES
+   ========================================================= */
+
+:root {
+    --azul-escuro: #0B1220;
+    --azul-fundo: #10182B;
+    --azul-card: #171A2B;
+    --azul-card-2: #252A46;
+
+    --roxo: #665F9E;
+
+    --laranja: #E8A546;
+    --amarelo: #FBBF24;
+
+    --branco: #F5F4F0;
+    --cinza-claro: #D8D7DC;
+    --cinza: #A6A5AE;
+    --preto: #10121F;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    font-family: "Manrope", sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.header {
+    width: 100%;
+    padding: 22px 7%;
+
+    background-color: var(--azul-escuro);
+
+    border-bottom: 1px solid rgba(216, 215, 220, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+
+/* BUSCA */
+
+.search-block{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.search {
+    width: 390px;
+    max-width: 100%;
+    position: relative;
+}
+
+.search span {
+    position: absolute;
+
+    left: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--cinza);
+
+    font-size: 20px;
+
+    z-index: 2;
+}
+
+.search input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 20px 0 45px;
+
+    background-color: var(--azul-escuro);
+    color: var(--preto);
+
+    border: var(--branco) 1px solid;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+.search input::placeholder {
+    color: var(--cinza);
+}
+
+.search input:focus {
+    box-shadow: 0 0 0 2px rgba(232, 165, 70, 0.35);
+}
+
+
+/* MENU */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav a {
+    color: var(--branco);
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--laranja);
+}
+
+.nav-buttom{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-buttom a {
+    padding: 8px 24px;
+    background-color: var(--laranja);
+    color: var(--preto);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.nav-buttom .login-buttom {
+    padding: 8px 24px;
+    background-color: transparent;
+    border: 1px solid var(--cinza-claro);
+    color: var(--branco);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.nav-buttom a:hover {
+    background-color: var(--amarelo);
+    color: var(--preto);
+    transform: translateY(-1px);
+}
+
+.nav-buttom .login-buttom:hover {
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CATEGORIAS
+   ========================================================= */
+
+.categories {
+    min-height: 65px;
+
+    padding: 15px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    gap: 42px;
+
+    background-color: var(--azul-card);
+
+    border-bottom: 1px solid rgba(216, 215, 220, 0.05);
+}
+
+.categories a {
+    color: var(--cinza-claro);
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.categories a:hover {
+    color: var(--laranja);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 90vh;
+
+    padding: 105px 8%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    
+
+    background-image: url("../img/fundo.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* CONTEÚDO */
+
+.hero-content {
+    width: 800px;
+    max-width: 100%;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* SUBTÍTULO */
+
+.hero-subtitle {
+    margin-bottom: 14px;
+
+    color: var(--laranja);
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    margin-bottom: 25px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: clamp(48px, 6vw, 64px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+.hero h1 span{
+    color: var(--laranja);
+}
+
+/* DESCRIÇÃO */
+
+.hero-description {
+    max-width: 680px;
+
+    margin-bottom: 30px;
+
+    color: var(--cinza-claro);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* BOTÃO */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background-color: var(--laranja);
+    color: var(--preto);
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--amarelo);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SOBRE A MOONIE
+   ========================================================= */
+
+.about {
+    padding: 90px 8%;
+    
+    align-items: center;
+    display: flex;
+    gap: 60px;
+
+    background-color: var(--azul-card);
+
+    border-top: 1px solid rgba(216, 215, 220, 0.04);
+    border-bottom: 1px solid rgba(216, 215, 220, 0.04);
+}
+
+.about-image {
+    max-width: 500px;
+    width: 50%;
+    height: 50%;
+    border-radius: 16px;
+    overflow: hidden; 
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about .section-label {
+    margin-bottom: 12px;
+
+    color: var(--laranja);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+}
+
+.about h2 {
+    margin-bottom: 22px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: 42px;
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+.about p {
+    max-width: 1000px;
+
+    margin-bottom: 12px;
+
+    color: var(--cinza-claro);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TÍTULOS DAS SEÇÕES
+   ========================================================= */
+
+.section-heading {
+    max-width: 1200px;
+
+    margin: 0 auto 45px;
+}
+
+.section-label {
+    margin-bottom: 10px;
+
+    color: var(--laranja);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-weight: 400;
+    font-size: 42px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   MOMENTOS
+   ========================================================= */
+
+.moments {
+    padding: 90px 8%;
+
+    background-color: var(--azul-escuro);
+}
+
+
+/* CARDS */
+
+.moment-cards {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.moment-card {
+    min-height: 270px;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        145deg,
+        var(--azul-card),
+        var(--azul-card-2)
+    );
+
+    border: 1px solid #3d4775;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.moment-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--laranja);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* ÍCONES */
+
+.moment-icon {
+    margin-bottom: 20px;
+}
+
+.moment-icon img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+}
+
+
+/* TEXTOS */
+
+.moment-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+    font-weight: 500;
+    font-size: 23px;
+
+    line-height: 1.3;
+}
+
+.moment-card p {
+    margin-bottom: 18px;
+
+    color: var(--cinza-claro);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+.moment-card a {
+    color: var(--laranja);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.moment-card a:hover {
+    color: var(--amarelo);
+}
+
+
+/* =========================================================
+   LIVROS EM DESTAQUE
+   ========================================================= */
+
+.featured {
+    padding: 90px 8%;
+
+    background-color: var(--azul-card);
+}
+
+.featured .section-heading {
+    margin: 0 auto 45px;
+}
+
+.featured .section-heading h2 {
+    margin-bottom: 10px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+}
+
+.featured .section-heading > p:last-child {
+    color: var(--cinza-claro);
+
+    font-size: 16px;
+}
+
+
+/* CARDS */
+
+.book-cards {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.book-card {
+    overflow: hidden;
+
+    background-color: var(--azul-escuro);
+
+    border: 1px solid var(--azul-card-2);
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--laranja);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* CAPA */
+
+.book-cover {
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../img/umanovahistoria.jpg);
+    background-size: cover;
+    background-position: start center;
+
+    border-bottom: 1px solid var(--azul-card-2);
+}
+
+.book-cover2 {
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../img/entrepagina.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 1px solid var(--azul-card-2);
+}
+
+.book-cover3 {
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../img/depoisdameianoite.jpg);
+    background-size: cover;
+    background-position: start center;
+
+    border-bottom: 1px solid var(--azul-card-2);
+}
+
+.book-cover span {
+    color: var(--laranja);
+
+    font-family: "Lora", serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+}
+
+
+/* INFORMAÇÕES */
+
+.book-info {
+    padding: 24px;
+}
+
+.book-info h3 {
+    margin-bottom: 8px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+    font-weight: 500;
+    font-size: 23px;
+}
+
+.book-info p {
+    margin-bottom: 18px;
+
+    color: var(--cinza-claro);
+
+    font-size: 14px;
+}
+
+.book-info a {
+    color: var(--laranja);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.book-info a:hover {
+    color: var(--amarelo);
+}
+
+
+/* =========================================================
+   ESPAÇOS
+   ========================================================= */
+
+.spaces {
+    padding: 90px 8%;
+
+    background-color: var(--azul-escuro);
+}
+
+.spaces-content {
+    max-width: 1200px;
+
+    margin: 0 auto 45px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.spaces-content .section-heading {
+    margin: 0;
+}
+
+
+/* CARDS DOS ESPAÇOS */
+
+.space-cards {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.space-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--laranja);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+.space-image1 {
+    width: 100%;
+    height: 100%;
+
+    min-height: 330px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 24px;
+
+    background-image: url(../img/cafe.png);
+}
+
+.space-image2 {
+    width: 100%;
+    height: 100%;
+
+    min-height: 330px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 24px;
+
+    background-image: url(../img/Estudo.png);
+}
+
+.space-image3 {
+    width: 100%;
+    height: 100%;
+
+    min-height: 330px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 24px;
+
+    background-image: url(../img/salaleitura.png);
+}
+
+.space-image4 {
+    width: 100%;
+    height: 100%;
+
+    min-height: 330px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 24px;
+
+    background-image: url(../img/jardim.png);
+}
+
+.space-image1, .space-image2, .space-image3, .space-image4 span {
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   COMPARTILHAR HISTÓRIA
+   ========================================================= */
+
+.share-story {
+    padding: 90px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(11, 18, 32, 0.96),
+            rgba(23, 26, 43, 0.88)
+        );
+
+    
+}
+
+.share-story-content {
+    
+
+    margin: 0 auto;
+}
+
+.share-story h2 {
+    margin-bottom: 18px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+.share-story p:not(.section-label) {
+    margin-bottom: 28px;
+
+    color: var(--cinza-claro);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BOTÃO DAS SEÇÕES
+   ========================================================= */
+
+.section-button {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.section-button:hover {
+    background-color: var(--amarelo);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   COMUNIDADE
+   ========================================================= */
+
+.community {
+    padding: 90px 8%;
+
+    background-color: var(--azul-card);
+
+    text-align: center;
+}
+
+.community-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.community h2 {
+    margin-bottom: 18px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+}
+
+.community p:not(.section-label) {
+    margin-bottom: 28px;
+
+    color: var(--cinza-claro);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EVENTOS
+   ========================================================= */
+
+.events {
+    padding: 90px 8%;
+
+    background-color: var(--azul-card);
+}
+
+.event-cards {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.event-card {
+    padding: 35px;
+
+    background: linear-gradient(
+        145deg,
+        var(--azul-card),
+        var(--azul-card-2)
+    );
+
+    border: 1px solid #3d4775;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--laranja);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+.event-card p {
+    margin-bottom: 14px;
+
+    color: var(--laranja);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+.event-card h3 {
+    margin-bottom: 25px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: 25px;
+
+    line-height: 1.3;
+}
+
+.event-card span {
+    color: var(--cinza-claro);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FRASE FINAL
+   ========================================================= */
+
+.quote {
+    padding: 160px 8%;
+
+    background-image: url("../img/bg.png");
+}
+
+.quote p {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: 32px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.footer {
+    padding: 60px 8% 25px;
+    
+    background-color: var(--azul-escuro);
+}
+
+.footer-logoA {
+    display: flex;
+    
+    flex-direction: column;
+
+    width: 100%;
+}
+
+
+
+.footer-logo p {
+    margin-top: 24px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    line-height: 1.3;
+
+    font-size: 24px;
+}
+
+.footer-links {
+    margin-top: 35px;
+
+    display: flex;
+
+    width: 100%;
+
+    flex-direction: row;
+
+    gap: 80px;
+}
+
+.footer-links h3 {
+    margin-bottom: 15px;
+
+    color: var(--branco);
+
+    font-size: 16px;
+}
+
+.footer-links a {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--cinza-claro);
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--laranja);
+}
+
+
+/* =========================================================
+   PARTE FINAL DO RODAPÉ
+   ========================================================= */
+
+.footer-bottom {
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(216, 215, 220, 0.08);
+
+}
+
+.footer-bottom p {
+    color: var(--cinza);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .search {
+        order: 3;
+        width: 100%;
+    }
+
+    .moment-cards,
+    .book-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .space-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 20px 5%;
+
+        flex-direction: column;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .categories {
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .about,
+    .moments,
+    .featured,
+    .spaces,
+    .share-story,
+    .community,
+    .events {
+        padding: 65px 6%;
+    }
+
+    .about {
+    display: block;
+    }
+
+    .about h2,
+    .section-heading h2,
+    .community h2,
+    .share-story h2 {
+        font-size: 34px;
+    }
+
+    .moment-cards,
+    .book-cards,
+    .space-cards,
+    .event-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .spaces-content {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .logo img {
+        width: 125px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .moment-card {
+        padding: 24px;
+    }
+
+        .about {
+    display: block;
+    }
+
+    .event-card {
+        padding: 25px;
+    }
+
+}

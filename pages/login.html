@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Entrar — Moonie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+
+
+  <main class="auth-card">
+    <div class="auth-photo" aria-hidden="true">
+      <div class="stars-decor"></div>
+      <div class="moon-decor"></div>
+      <div class="windows-decor"><span></span><span></span><span></span></div>
+      <div class="shelves-decor"></div>
+      <div class="vignette-decor"></div>
+    </div>
+
+    <section class="auth-form-panel">
+      <a href="../index.html" class="brand"><img src="../img/Logo.png" alt=""></a>
+      <h1>Entre e continua <span class="text-orange">sua leitura.</span></h1>
+      <p class="auth-lead">Acesse sua conta para reservar livros, salvar eventos e participar da comunidade.</p>
+
+      <a href="../index.html" class="back-home-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Voltar ao início
+      </a>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required />
+          <span class="field-error" id="email-error" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <div class="field-label-row">
+            <label for="senha">Senha</label>
+            <a href="recuperar-senha.html" class="forgot-link">ESQUECEU SUA SENHA?</a>
+          </div>
+          <div class="password-field">
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required />
+            <button type="button" class="toggle-password" id="toggle-senha" aria-label="Mostrar senha" aria-pressed="false">
+              <svg class="icon-eye is-visible" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              <svg class="icon-eye-off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a3 3 0 0 0 4.2 4.2M6.5 6.7C4 8.3 2 12 2 12s3.6 7 10 7c1.8 0 3.4-.5 4.7-1.3M9.9 5.2A9.6 9.6 0 0 1 12 5c6.4 0 10 7 10 7a15.5 15.5 0 0 1-3 3.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="senha-error" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn-primary" id="submit-btn">ENTRAR</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="divider"><span>OU</span></div>
+
+      <p class="switch-line">Ainda não é membro? <a href="cadastro.html">Cadastre-se</a></p>
+    </section>
+  </main>
+
+  <!-- login.js também está na raiz, em /js -->
+  <script src="../js/login.js"></script>
+  <script src="../js/chat-widget.js"></script>
+</body>
+</html>

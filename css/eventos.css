@@ -1,0 +1,348 @@
+/* =========================================================
+   MOONIE — EVENTOS
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.events-hero {
+    min-height: 470px;
+
+    padding: 100px 8%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--azul-escuro),
+            var(--azul-fundo)
+        );
+}
+
+.events-hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.events-hero .section-label {
+    margin-bottom: 14px;
+}
+
+.events-hero h1 {
+    max-width: 800px;
+
+    margin-bottom: 25px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+    font-size: clamp(45px, 6vw, 70px);
+    line-height: 1.08;
+}
+
+.events-hero p:not(.section-label) {
+    max-width: 650px;
+
+    color: var(--cinza-claro);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EVENTOS
+   ========================================================= */
+
+.events-section {
+    padding: 90px 8%;
+
+    background-color: var(--azul-fundo);
+}
+
+.events-heading {
+    max-width: 1200px;
+
+    margin: 0 auto 45px;
+}
+
+.events-heading .section-label {
+    margin-bottom: 10px;
+}
+
+.events-heading h2 {
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.event-cards {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.event-card {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--azul-card),
+            var(--azul-card-2)
+        );
+
+    border: 1px solid #3d4775;
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--laranja);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   DATA
+   ========================================================= */
+
+.event-date {
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    border-radius: 8px;
+}
+
+.event-date strong {
+    font-family: "Lora", serif;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.event-date span {
+    margin-top: 4px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+   ========================================================= */
+
+.event-type {
+    margin-bottom: 10px;
+
+    color: var(--laranja);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.event-info h3 {
+    margin-bottom: 14px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.event-info > p:not(.event-type) {
+    margin-bottom: 20px;
+
+    color: var(--cinza-claro);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.event-time {
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: var(--cinza);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BOTÃO
+   ========================================================= */
+
+.event-button {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 11px 20px;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: var(--amarelo);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   COMUNIDADE
+   ========================================================= */
+
+.events-community {
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--azul-escuro),
+            var(--azul-card-2)
+        );
+
+    text-align: center;
+}
+
+.events-community > div {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.events-community h2 {
+    margin-bottom: 18px;
+
+    color: var(--branco);
+
+    font-family: "Lora", serif;
+
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.events-community p:not(.section-label) {
+    color: var(--cinza-claro);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .event-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .events-hero {
+        min-height: 400px;
+        padding: 75px 6%;
+    }
+
+    .events-hero h1 {
+        font-size: 42px;
+    }
+
+    .events-hero p:not(.section-label) {
+        font-size: 15px;
+    }
+
+    .events-section {
+        padding: 65px 6%;
+    }
+
+    .events-heading h2,
+    .events-community h2 {
+        font-size: 34px;
+    }
+
+    .event-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .events-community {
+        padding: 70px 6%;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .events-hero h1 {
+        font-size: 36px;
+    }
+
+    .event-card {
+        padding: 24px;
+    }
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Moonie</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="cadastro-page">
+      <section class="cadastro-image">
+      </section>
+
+     <section class="cadastro-content">
+    <div class="cadastro-box">
+    <a href="../index.html"><img src="../img/Logo.png" alt="Moonie Logo" class="logo"></a>
+
+    <p class="title">Cadastre-se para sua leitura ser melhor.</p>
+
+    <p class="description">Crie sua conta para reservar livros, salvar eventos e participar da comunidade.</p>
+
+    <form id="cadastroForm">
+    <label for="nome">NOME COMPLETO</label>
+    <input type="text" id="nome" placeholder="DIGITE SEU NOME COMPLETO" required>
+
+    <label for="email">E-MAIL</label>
+    <input type="email" id="email" placeholder="DIGITE SEU E-MAIL" required>
+
+    <label for="senha">SENHA</label>
+    <div class="password-container">
+    <input type="password" id="senha" placeholder="DIGITE SUA SENHA" required>
+    <button type="button" class="eye" data-target="senha">◉</button>
+    </div>
+
+    <label for="confirmarSenha">CONFIRMAR SENHA</label>
+    <div class="password-container">
+    <input type="password" id="confirmarSenha" placeholder="CONFIRME SUA SENHA" required>
+    <button type="button" class="eye" data-target="confirmarSenha">◉</button>
+    </div>
+
+    <a href="../index.html" class="back-home-link">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Voltar ao início
+    </a>
+
+    <label class="terms">
+    <input type="checkbox" id="termos" required>
+    <span>Li e aceito os Termos de Uso</span>
+    </label>
+
+    <button type="submit" class="cadastro-button">CRIAR CONTA</button>
+
+    <p class="login-text">Já possui uma conta?<a href="login.html"> Entrar</a></p>
+    </form>
+    </div>
+        </section>
+    </main>
+
+    <script src="../js/cadastro.js"></script>
+    <script src="../js/chat-widget.js"></script>
+</body>
+</html>

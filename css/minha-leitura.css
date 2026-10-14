@@ -1,0 +1,115 @@
+.reading-page {
+    min-height: 600px;
+    padding: 90px 8%;
+    background: var(--azul-escuro);
+}
+
+.reading-page h1 {
+    margin: 10px 0 15px;
+
+    font-family: "Lora", serif;
+    font-size: clamp(40px, 5vw, 60px);
+
+    color: var(--branco);
+}
+
+.reading-intro {
+    max-width: 600px;
+    margin-bottom: 50px;
+
+    color: var(--cinza-claro);
+    line-height: 1.7;
+}
+
+.reading-books {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.reading-book {
+    overflow: hidden;
+    border-radius: 14px;
+    background: var(--azul-card);
+}
+
+.reading-cover {
+    min-height: 280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        var(--roxo),
+        var(--azul-card-2)
+    );
+}
+
+.reading-cover span {
+    font-family: "Lora", serif;
+    font-size: 23px;
+    color: var(--branco);
+}
+
+.reading-info {
+    padding: 22px;
+}
+
+.reading-info p {
+    color: var(--laranja);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.reading-info h2 {
+    font-family: "Lora", serif;
+    font-size: 20px;
+    color: var(--branco);
+}
+
+.reading-info a {
+    color: var(--laranja);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .reading-books {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .reading-page {
+        padding: 65px 6%;
+    }
+
+    .reading-books {
+        grid-template-columns: 1fr;
+    }
+}
+
+.remove-reading {
+    margin-left: 10px;
+    padding: 7px 12px;
+    border: 1px solid var(--roxo);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--cinza-claro);
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-reading:hover {
+    background: var(--roxo);
+    color: var(--branco);
+}

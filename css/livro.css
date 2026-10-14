@@ -1,0 +1,223 @@
+/* =====================================================
+   MOONIE — DETALHES DO LIVRO
+   ===================================================== */
+
+.book-detail {
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    align-items: center;
+    gap: 80px;
+
+    padding: 100px 8%;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(102, 95, 158, 0.25),
+            transparent 45%
+        ),
+        var(--azul-escuro);
+}
+
+
+/* CAPA */
+
+.book-detail-cover {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.book-detail-cover .library-cover {
+    width: 320px;
+    height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-image: url("../img/livroalice.png");
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.book-detail-cover .library-cover span {
+    max-width: 230px;
+
+    text-align: center;
+
+    font-family: "Lora", serif;
+
+    font-size: 30px;
+    line-height: 1.3;
+
+    color: var(--branco);
+}
+
+
+/* INFORMAÇÕES */
+
+.book-detail-info {
+    max-width: 700px;
+}
+
+.book-detail-info h1 {
+    margin: 15px 0;
+
+    font-family: "Lora", serif;
+
+    font-size: clamp(40px, 5vw, 64px);
+
+    line-height: 1.1;
+
+    color: var(--branco);
+}
+
+.book-author {
+    margin-bottom: 30px;
+
+    color: var(--laranja);
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.book-description {
+    max-width: 600px;
+
+    margin-bottom: 35px;
+
+    color: var(--cinza-claro);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* BOTÕES */
+
+.book-actions {
+    display: flex;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.btn-book,
+.btn-favorite {
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-book {
+    border: none;
+
+    background: var(--laranja);
+    color: var(--preto);
+}
+
+.btn-book:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-favorite {
+    border: 1px solid var(--roxo);
+
+    background: transparent;
+
+    color: var(--branco);
+}
+
+.btn-favorite:hover {
+    background: var(--roxo);
+}
+
+
+/* VOLTAR */
+
+.back-library {
+    color: var(--cinza-claro);
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+.back-library:hover {
+    color: var(--laranja);
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .book-detail {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 70px 6%;
+    }
+
+    .book-detail-cover .library-cover {
+        width: 260px;
+        height: 370px;
+    }
+
+    .book-detail-info {
+        text-align: center;
+    }
+
+    .book-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .book-actions {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .book-detail-info h1 {
+        font-size: 38px;
+    }
+
+    .book-actions {
+        flex-direction: column;
+    }
+
+}
+
+.btn-favorite.favoritado{
+    background: var(--roxo);
+    border-color: var(--roxo);
+    color: var(--branco);
+}
+
+.btn-book.adicionado{
+    background: var(--roxo);
+    color: var(--branco);
+}

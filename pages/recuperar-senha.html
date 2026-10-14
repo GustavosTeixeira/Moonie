@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recuperar senha — Moonie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<!-- Reaproveita o MESMO CSS do login — mesma identidade visual,
+     mesmas classes (.auth-card, .field, .btn-primary...) -->
+<link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+
+  <main class="auth-card">
+    <div class="auth-photo" aria-hidden="true">
+      <div class="stars-decor"></div>
+      <div class="moon-decor"></div>
+      <div class="windows-decor"><span></span><span></span><span></span></div>
+      <div class="shelves-decor"></div>
+      <div class="vignette-decor"></div>
+    </div>
+
+    <section class="auth-form-panel">
+      <a href="../index.html" class="brand">Moonie</a>
+      <h1>Vamos recuperar <span class="text-orange">seu acesso.</span></h1>
+      <p class="auth-lead">Digite o e-mail cadastrado e defina uma nova senha para a sua conta.</p>
+
+      <form id="recuperar-form" novalidate>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required />
+          <span class="field-error" id="email-error" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="nova-senha">Nova Senha</label>
+          <input type="password" id="nova-senha" name="nova-senha" placeholder="Digite a nova senha" required />
+          <span class="field-error" id="nova-senha-error" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="confirmar-nova-senha">Confirmar Nova Senha</label>
+          <input type="password" id="confirmar-nova-senha" name="confirmar-nova-senha" placeholder="Confirme a nova senha" required />
+          <span class="field-error" id="confirmar-nova-senha-error" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn-primary" id="submit-btn">ALTERAR SENHA</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="divider"><span>OU</span></div>
+
+      <p class="switch-line">Lembrou a senha? <a href="login.html">Voltar para o login</a></p>
+    </section>
+  </main>
+
+  <script src="../js/recuperar-senha.js"></script>
+  <script src="js/chat-widget.js"></script>
+</body>
+</html>

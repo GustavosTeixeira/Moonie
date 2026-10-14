@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Assistente Moonie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/chatbot.css" />
+</head>
+<body>
+
+  <div class="chat-page">
+    <div class="chat-window">
+
+      <header class="chat-header">
+        <!-- some sozinho quando o chat é aberto dentro do painel flutuante
+             (ver "detectar iframe" no chatbot.js) -->
+        <a href="../index.html" class="chat-back" id="chat-back-link" aria-label="Voltar para o site">←</a>
+        <div class="chat-header-avatar" aria-hidden="true">🌙</div>
+        <div class="chat-header-text">
+          <h1>Assistente Moonie</h1>
+          <p><span class="status-dot"></span> Online agora</p>
+        </div>
+      </header>
+
+      <div class="chat-messages" id="chat-messages" aria-live="polite"></div>
+
+      <div class="chat-suggestions" id="chat-suggestions"></div>
+
+      <form class="chat-input-row" id="chat-form">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Escreva sua mensagem..."
+          autocomplete="off"
+          aria-label="Escreva sua mensagem"
+        />
+        <button type="submit" class="chat-send" aria-label="Enviar mensagem">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12l16-8-6 8 6 8-16-8Z" fill="currentColor"/></svg>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Ordem importa: os dados (intenções/respostas) precisam existir
+       antes do chatbot.js usá-los -->
+  <script src="../js/chatbot-respostas.js"></script>
+  <script src="../js/chatbot.js"></script>
+</body>
+</html>
